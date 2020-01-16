@@ -24,54 +24,48 @@
     <header class="jumbotron text-center">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead">3</p>
+      <p id="currentDay" class="lead font-weight-bold"></p>
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
-      <div class="row mb-5">
-        <div class="col-md-2">
-          Time
-        </div>
-        <div class="col-md-8">
-          Event
-        </div>
-        <div class="col-md-2">
-          Action
-        </div>
+      <div class="row mb-5 font-weight-bold">
+        <div class="col-md-2"><i class="fa fa-clock-o"></i> Time</div>
+        <div class="col-md-8"><i class="fa fa-check"></i> Event</div>
+        <div class="col-md-2"><i class="fa fa-floppy-o"></i> Action</div>
       </div>
-      <div class="row" id="div-19" data-hour="19">
+      <div class="row p-2" id="div-15" data-hour="15">
         <div class="col-md-2">
-          7 PM
+          3 PM
         </div>
         <div class="col-md-8">
           <div class="form-group">
-            <input type="text" class="form-control" id="event-7" />
+            <input type="text" class="form-control" id="event-15" />
+          </div>
+        </div>
+        <div class="col-md-2">
+          <button class="btn btn-primary" id="btn-15">Save</button>
+        </div>
+      </div>
+      <div class="row p-2" id="div-16" data-hour="16">
+        <div class="col-md-2">
+          4 PM
+        </div>
+        <div class="col-md-8">
+          <div class="form-group">
+            <input type="text" class="form-control" id="event-16" />
           </div>
         </div>
         <div class="col-md-2">
           <button class="btn btn-primary">Save</button>
         </div>
       </div>
-      <div class="row" id="div-20" data-hour="20">
+      <div class="row p-2" id="div-17" data-hour="17">
         <div class="col-md-2">
-          8 PM
+          5 PM
         </div>
         <div class="col-md-8">
           <div class="form-group">
-            <input type="text" class="form-control" id="event-8" />
-          </div>
-        </div>
-        <div class="col-md-2">
-          <button class="btn btn-primary">Save</button>
-        </div>
-      </div>
-      <div class="row" id="div-21" data-hour="21">
-        <div class="col-md-2">
-          9 PM
-        </div>
-        <div class="col-md-8">
-          <div class="form-group">
-            <input type="text" class="form-control" id="event-9" />
+            <input type="text" class="form-control" id="event-17" />
           </div>
         </div>
         <div class="col-md-2">
