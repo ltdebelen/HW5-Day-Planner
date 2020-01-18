@@ -1,9 +1,10 @@
 const dateToday = moment().format("dddd, MMMM Do");
-const currentHour = moment().format("H");
+// const currentHour = moment().format("H");
+const currentHour = "11";
+console.log(typeof currentHour);
 let events = [];
 
 generateEventRows();
-
 // Dynamically create elements and append them in
 function generateEventRows() {
   let timeArr = [9, 10, 11, 12, 13, 14, 15, 16, 17];
@@ -80,7 +81,7 @@ function generateEventRows() {
 $("#currentDay").text(dateToday);
 
 // change css styling and behavior based on current hour
-let eventHours = [20, 21, 22];
+let eventHours = [9, 10, 11, 12, 13, 14, 15, 16, 17];
 eventHours.forEach(hour => {
   // compare currentHour to the value of div id
   const divHourVal = $("#div-" + hour).data("hour");
@@ -92,7 +93,7 @@ eventHours.forEach(hour => {
     $("#btn-" + hour).attr("disabled", true);
   } else if (currentHour == divHourVal) {
     // event is currently happening
-    $("#div-" + hour).css("background", "orange");
+    $("#div-" + hour).css("background", "skyblue");
   } else if (currentHour < divHourVal) {
     // event is going to happen
     $("#div-" + hour).css("background", "lightgreen");
@@ -117,7 +118,6 @@ function saveEvent(id, event) {
 
   events.push(eventObj);
   localStorage.setItem("events", JSON.stringify(events));
-  alert("Event Save");
 }
 
 // Populate hourly task from localStorage values
