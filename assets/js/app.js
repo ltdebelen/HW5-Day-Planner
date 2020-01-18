@@ -1,7 +1,5 @@
 const dateToday = moment().format("dddd, MMMM Do");
-// const currentHour = moment().format("H");
-const currentHour = "11";
-console.log(typeof currentHour);
+const currentHour = moment().format("H");
 let events = [];
 
 generateEventRows();
